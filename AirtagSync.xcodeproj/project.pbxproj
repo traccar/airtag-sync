@@ -8,23 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		5E22D1872BBA270100B5F827 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E22D1862BBA270100B5F827 /* main.swift */; };
+		5E8A94102BD46320001E102F /* config.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5E8A940E2BD45DD3001E102F /* config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		5E22D1812BBA270100B5F827 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				5E8A94102BD46320001E102F /* config.plist in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5E22D1832BBA270100B5F827 /* AirtagSync */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AirtagSync; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E22D1862BBA270100B5F827 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5E8A940E2BD45DD3001E102F /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 		5E22D1852BBA270100B5F827 /* AirtagSync */ = {
 			isa = PBXGroup;
 			children = (
+				5E8A940E2BD45DD3001E102F /* config.plist */,
 				5E22D1862BBA270100B5F827 /* main.swift */,
 			);
 			path = AirtagSync;
