@@ -11,6 +11,10 @@ The data is uploaded for all linked tags while the computer is awake.
 - Download and install package from releases
 - In `Settings` > `Privacy & Security` > `Full Disk Access` enable access for `AirtagSync`
 
+If something is not working, check logs using the following command:
+
+- `log show --predicate 'subsystem == "org.traccar.sync"' --info`
+
 ## Configuration
 
 Default configuration:
