@@ -12,12 +12,13 @@ func uploadItem(url: URL, item: [String: Any]) -> String? {
     guard let location = item["location"] as? [String: Any] else { return "Failed to decode location" }
     guard let latitude = location["latitude"] as? Double else { return "Failed to decode latitude" }
     guard let longitude = location["longitude"] as? Double else { return "Failed to decode longitude" }
+    guard let time = location["timeStamp"] as? Int64 else { return "Failed to decode timestamp" }
     
     log("Sending \(name) location")
     
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
-    request.httpBody = "id=\(name)&lat=\(latitude)&lon=\(longitude)".data(using: .utf8)
+    request.httpBody = "id=\(name)&lat=\(latitude)&lon=\(longitude)&timestamp=\(time)".data(using: .utf8)
     request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
     
     let semaphore = DispatchSemaphore(value: 0)
@@ -37,6 +38,10 @@ func main(server: String) -> String? {
     let homeDirectory = FileManager.default.homeDirectoryForCurrentUser.path
     let dataFile = "\(homeDirectory)/Library/Caches/com.apple.findmy.fmipcore/Items.data"
     guard let data = try? Data(contentsOf: URL(fileURLWithPath: dataFile)) else { return "Failed to read \(dataFile)" }
+
+    /*var format = PropertyListSerialization.PropertyListFormat.binary
+    guard let plist = try? PropertyListSerialization.propertyList(from: data, options: [], format: &format) else { return "Failed to decode bplist" }*/
+
     guard let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []) else { return "Failed to decode JSON" }
     guard let array = jsonObject as? [[String: Any]] else { return "Incorrect JSON format" }
 
