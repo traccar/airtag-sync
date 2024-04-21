@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="1">
+    <title>Traccar AirTag Sync</title>
+    <options customize="never" allow-external-scripts="no"/>
+    <choices-outline>
+        <line choice="default">
+            <line choice="org.traccar.sync.binary"/>
+            <line choice="org.traccar.sync.plist"/>
+        </line>
+    </choices-outline>
+    <choice id="default" visible="false">
+        <pkg-ref id="org.traccar.sync.binary"/>
+        <pkg-ref id="org.traccar.sync.plist"/>
+    </choice>
+    <choice id="org.traccar.sync.binary" title="Traccar AirTag Sync Binary">
+        <pkg-ref id="org.traccar.sync.binary"/>
+    </choice>
+    <choice id="org.traccar.sync.plist" title="Traccar AirTag Sync Service">
+        <pkg-ref id="org.traccar.sync.plist"/>
+    </choice>
+    <pkg-ref id="org.traccar.sync.binary" version="1.0" auth="Admin">airtag-sync-binary.pkg</pkg-ref>
+    <pkg-ref id="org.traccar.sync.plist" version="1.0" auth="Admin">airtag-sync-plist.pkg</pkg-ref>
+</installer-gui-script>

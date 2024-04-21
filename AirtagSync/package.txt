@@ -1,0 +1,3 @@
+pkgbuild --root ./bin/ --install-location /usr/local/bin --identifier org.traccar.sync.binary --version 1.0 airtag-sync-binary.pkg
+pkgbuild --root ./plist/ --install-location /Library/LaunchAgents --identifier org.traccar.sync.plist --version 1.0 airtag-sync-plist.pkg
+productbuild --distribution distribution.xml --package-path . airtag-sync.pkg

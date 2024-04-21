@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E22D1872BBA270100B5F827 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E22D1862BBA270100B5F827 /* main.swift */; };
-		5E8A94102BD46320001E102F /* config.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5E8A940E2BD45DD3001E102F /* config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +17,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				5E8A94102BD46320001E102F /* config.plist in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -27,7 +25,9 @@
 /* Begin PBXFileReference section */
 		5E22D1832BBA270100B5F827 /* AirtagSync */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AirtagSync; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E22D1862BBA270100B5F827 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		5E8A940E2BD45DD3001E102F /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		5E8A94112BD48445001E102F /* org.traccar.sync.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = org.traccar.sync.plist; sourceTree = "<group>"; };
+		5E8A94122BD48552001E102F /* package.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = package.txt; sourceTree = "<group>"; };
+		5E8A94132BD4869C001E102F /* distribution.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = distribution.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +60,10 @@
 		5E22D1852BBA270100B5F827 /* AirtagSync */ = {
 			isa = PBXGroup;
 			children = (
-				5E8A940E2BD45DD3001E102F /* config.plist */,
 				5E22D1862BBA270100B5F827 /* main.swift */,
+				5E8A94112BD48445001E102F /* org.traccar.sync.plist */,
+				5E8A94132BD4869C001E102F /* distribution.xml */,
+				5E8A94122BD48552001E102F /* package.txt */,
 			);
 			path = AirtagSync;
 			sourceTree = "<group>";
