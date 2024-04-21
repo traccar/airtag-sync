@@ -25,3 +25,8 @@ Default configuration:
 You can change those parameters in the `launchd` configuration:
 
 - `/Library/LaunchAgents/org.traccar.sync.plist`
+
+To apply new configuration, make sure to reload the service:
+
+- `launchctl unload /Library/LaunchAgents/org.traccar.sync.plist`
+- `launchctl load /Library/LaunchAgents/org.traccar.sync.plist`

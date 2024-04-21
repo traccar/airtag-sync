@@ -15,7 +15,7 @@ func uploadItem(url: URL, item: [String: Any]) -> String? {
     
     log("Sending \(name) location")
     
-    var request = URLRequest(url: URL(string: "https://demo.traccar.org")!)
+    var request = URLRequest(url: url)
     request.httpMethod = "POST"
     request.httpBody = "id=\(name)&lat=\(latitude)&lon=\(longitude)".data(using: .utf8)
     request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
